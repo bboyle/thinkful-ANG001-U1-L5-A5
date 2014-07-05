@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Show me kittens!</title>
 	<link rel="stylesheet" href="kittens.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+	<script src="app/kitten-search.js"></script>
 </head>
 <body>
 
@@ -13,7 +15,7 @@
 	</header>
 
 
-	<main>
+	<main ng-app="kitten-search">
 		<form action="#">
 			<label class="visuallyhidden" for="search">Keywords to search for:</label>
 			<input type="search" id="search" placeholder="kittens" required>
