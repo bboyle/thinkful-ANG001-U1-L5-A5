@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="kittens.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 	<script src="app/kitten-search.js"></script>
+	<script src="app/controller/SearchController.js"></script>
+	<script src="app/controller/ResultsController.js"></script>
 </head>
 <body>
 
@@ -16,15 +18,15 @@
 
 
 	<main ng-app="kitten-search">
-		<form action="#">
+		<form ng-controller="SearchController as search">
 			<label class="visuallyhidden" for="search">Keywords to search for:</label>
-			<input type="search" id="search" placeholder="kittens" required>
+			<input type="search" ng-model="search.query" placeholder="kittens" required>
 			<input type="submit" value="Search">
 		</form>
 
-		<section id="results">
+		<section id="results" ng-controller="ResultsController as results">
 			<header>
-				<h2>We found 20 results for 'kittens'</h2>
+				<h2>We found {{ results.count || number }} results for '{{ results.query }}'</h2>
 			</header>
 
 			<ol>
