@@ -1,0 +1,68 @@
+/*http://davidwalsh.name/html5-boilerplate*/
+html {
+	font-size: 100%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+
+body {
+	background: #fafafa;
+	color: #444;
+	text-align: center;
+	font: 24px/1.5 sans-serif;
+}
+
+
+header, main, footer {
+	margin: 1em 0;
+}
+header h1 {
+	margin: 0;
+}
+
+
+/*https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css#L124*/
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+input {
+	font: inherit;
+	padding: .5em .3em;
+}
+input[type="submit"] {
+	padding: .5em .7em;
+}
+
+
+#results ul {
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+	/*text-align: left;*/
+}
+#results li {
+	display: inline-block;
+	margin: 1em;
+}
+#results img {
+	display: block;
+	background: #111;
+	width: 256px;
+	height: 256px;
+}
+
+
+footer {
+	margin-bottom: 5em;
+}

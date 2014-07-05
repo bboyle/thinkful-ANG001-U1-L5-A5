@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Show me kittens!</title>
+	<link rel="stylesheet" href="kittens.css">
 </head>
 <body>
 
@@ -14,8 +15,9 @@
 
 	<main>
 		<form action="#">
-			<input type="search" id="search" placeholder="kittens">
-			<button>Search</button>
+			<label class="visuallyhidden" for="search">Keywords to search for:</label>
+			<input type="search" id="search" placeholder="kittens" required>
+			<input type="submit" value="Search">
 		</form>
 
 		<section id="results">
@@ -24,7 +26,12 @@
 			</header>
 
 			<ul>
-				<li><img src="" alt=""></li>
+				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
+				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
+				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
+				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
+				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
+				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
 			</ul>
 		</section>
 	</main>
