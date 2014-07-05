@@ -17,6 +17,7 @@ angular.module( 'kitten-search' )
 
 		// onfail: display error
 		// on no results: display message
+		// this message should say "No results. Search for kittens?" ;)
 
 		// on success: update results
 		$rootScope.$broadcast( 'results', results );
