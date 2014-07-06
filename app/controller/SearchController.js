@@ -1,5 +1,5 @@
 angular.module( 'kitten-search' )
-.controller( 'SearchController', function( $scope, $attrs, $rootScope ) {
+.controller( 'SearchController', function( $http, $rootScope ) {
 
 	this.query = '';
 
@@ -14,6 +14,20 @@ angular.module( 'kitten-search' )
 
 		// TODO look up the instagram API
 		// show that instagram is being queried…
+		$http({
+			method: 'JSONP',
+			url: 'https://api.instagram.com/v1/tags/' + encodeURIComponent( this.query ) + '/media/recent',
+			params: {
+				callback: 'JSON_CALLBACK',
+				client_id: '5f11eeda43dc437b968ce3a6db18c8d0'
+			}
+		})
+		.success(function( data, status, headers, config ) {
+			console.log( 'success', data, status, headers, config );
+		})
+		.error(function( data, status, headers, config ) {
+			console.log( 'error', data, status, headers, config );
+		});
 
 		// onfail: display error
 		// on no results: display message
