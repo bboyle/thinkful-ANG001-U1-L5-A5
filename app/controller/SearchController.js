@@ -32,7 +32,7 @@ angular.module( 'kitten-search' )
 			} else {
 				// on success: update results
 				console.log( 'success', data );
-				results.count = data.length;
+				results.count = data.data.length;
 				results.data = data.data;
 				$rootScope.$broadcast( 'results', results );
 			}
