@@ -1,2 +1,2 @@
 // create app
-angular.module( 'kitten-search', [] );
+angular.module( 'kitten-search', [ 'ngAnimate' ] );

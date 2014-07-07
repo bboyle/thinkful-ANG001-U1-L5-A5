@@ -4,7 +4,10 @@
 	<meta charset="UTF-8">
 	<title>Show me kittens!</title>
 	<link rel="stylesheet" href="kittens.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-animate.min.js"></script>
+
 	<script src="app/kitten-search.js"></script>
 	<script src="app/controller/SearchController.js"></script>
 	<script src="app/controller/ResultsController.js"></script>
@@ -47,7 +50,7 @@
 			</header>
 
 			<ol class="gallery">
-				<li ng-repeat="gram in results.instagrams">
+				<li class="animate" ng-repeat="gram in results.instagrams">
 					<a href="{{ gram.link }}">
 						<figure>
 							<img ng-src="{{ gram.images.low_resolution.url }}" alt="">
