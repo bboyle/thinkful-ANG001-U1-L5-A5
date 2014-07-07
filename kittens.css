@@ -47,6 +47,16 @@ input[type="submit"] {
 }
 
 
+.status {
+	background: #ff7;
+	padding: 1em;
+	margin: 2em;
+}
+.status h2 {
+	margin-top: 0;
+}
+
+
 .gallery {
 	display: block;
 	margin: 0 auto;
