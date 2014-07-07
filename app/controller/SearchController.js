@@ -24,7 +24,7 @@ angular.module( 'kitten-search' )
 		})
 		.success(function( data, status, headers, config ) {
 			// console.log( 'success', data, status, headers, config );
-			if ( data.length === 0 ) {
+			if ( data.data.length === 0 ) {
 				// on no results: display message
 				// this message should say "No results. Search for kittens?" ;)
 				console.log( 'no results', data, status, headers, config );
