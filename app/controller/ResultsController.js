@@ -8,7 +8,7 @@ angular.module( 'kitten-search' )
 
 	// new results available
 	$scope.$on( 'results', function( event, data ) {
-		console.log( 'updating results', data );
+		// console.log( 'updating results', data );
 		RC.available = true;
 		RC.count = data.count;
 		RC.query = data.query;
