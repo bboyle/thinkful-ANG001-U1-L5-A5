@@ -25,7 +25,7 @@
 		</form>
 
 		<section id="results" ng-controller="ResultsController as results">
-			<header>
+			<header ng-if="results.available">
 				<h2>We found {{ results.count | number }} results for '{{ results.query }}'</h2>
 			</header>
 
