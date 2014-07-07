@@ -8,6 +8,7 @@ angular.module( 'kitten-search' )
 	this.error = false;
 
 	function searching( state ) {
+		SEARCH.noResults = false;
 		SEARCH.error = false;
 		SEARCH.searching = !! state;
 	}
