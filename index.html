@@ -13,7 +13,7 @@
 
 	<header>
 		<h1>Show me kittens!</h1>
-		<small>(will also show photos of other things)</small>
+		<small>(will also show pictures of other things)</small>
 	</header>
 
 
@@ -26,15 +26,15 @@
 
 		<section id="results" ng-controller="ResultsController as results">
 			<header>
-				<h2>We found {{ results.count || number }} results for '{{ results.query }}'</h2>
+				<h2>We found {{ results.count | number }} results for '{{ results.query }}'</h2>
 			</header>
 
-			<ol>
+			<ol class="gallery">
 				<li ng-repeat="gram in results.instagrams">
 					<a href="{{ gram.link }}">
 						<figure>
-							<img ng-src="{{ gram.images.thumbnail.url }}" alt="">
-							<figcaption>{{ gram.caption.text }}</figcaption>
+							<img ng-src="{{ gram.images.low_resolution.url }}" alt="">
+							<figcaption class="visuallyhidden">{{ gram.caption.text }}</figcaption>
 						</figure>
 					</a>
 				</li>
