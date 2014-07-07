@@ -5,8 +5,10 @@ angular.module( 'kitten-search' )
 	this.query = '';
 	this.searching = false;
 	this.noResults = false;
+	this.error = false;
 
 	function searching( state ) {
+		SEARCH.error = false;
 		SEARCH.searching = !! state;
 	}
 
@@ -50,6 +52,7 @@ angular.module( 'kitten-search' )
 			console.log( 'error', data, status, headers, config );
 			// onfail: display error
 			searching( false );
+			SEARCH.error = true;
 		});
 
 	};

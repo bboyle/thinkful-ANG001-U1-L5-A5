@@ -34,6 +34,11 @@
 				<h2>No results for '{{ search.query }}'</h2>
 				<p>Try searching for <var>'kitteh'</var> instead!</p>
 			</div>
+
+			<div class="status" ng-if="search.error">
+				<h2>Error accessing instagram data</h2>
+				<p>Try searching for <var>'kitteh'</var> instead!</p>
+			</div>
 		</section>
 
 		<section id="results" ng-controller="ResultsController as results">
