@@ -30,12 +30,14 @@
 			</header>
 
 			<ol>
-				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
-				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
-				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
-				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
-				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
-				<li><a href="//instagram.com/#"><img src="" alt=""></a></li>
+				<li ng-repeat="gram in results.instagrams">
+					<a href="{{ gram.link }}">
+						<figure>
+							<img ng-src="{{ gram.images.thumbnail.url }}" alt="">
+							<figcaption>{{ gram.caption.text }}</figcaption>
+						</figure>
+					</a>
+				</li>
 			</ol>
 		</section>
 	</main>
